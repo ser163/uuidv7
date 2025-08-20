@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package version="2.0" xmlns="http://pear.php.net/dtd/package-2.0">
+    <!-- 基础元数据 -->
+    <name>uuidv7</name>
+    <channel>pecl.php.net</channel>
+    <summary>RFC 9562-compliant UUID v7 generator for PHP</summary>
+    <description>
+        Generates time-sortable UUIDv7 identifiers in string or binary format.
+        Optimized for high performance and database efficiency (BINARY(16) storage).
+        Includes clock rollback protection and thread-safe sequencing.
+    </description>
+
+    <!-- 维护者信息 -->
+    <lead>
+        <name>ser163</name>
+        <email>hl19863129@gmail.com</email>
+        <active>yes</active>
+    </lead>
+
+    <!-- 发布版本 -->
+    <version>
+        <release>1.0.0</release>
+        <api>1.0.0</api>
+    </version>
+
+    <!-- 依赖项 -->
+    <dependencies>
+        <required>
+            <!-- PHP 版本要求 -->
+            <php>
+                <min>7.4.0</min>
+            </php>
+            <!-- 扩展依赖 -->
+            <extension>
+                <name>openssl</name>
+            </extension>
+            <!-- 包依赖示例（若需其他库） -->
+            <package>
+                <name>pear/pear_exception</name>
+                <min>1.0.0</min>
+            </package>
+        </required>
+    </dependencies>
+
+    <!-- 文件结构 -->
+    <filelist>
+        <!-- 源代码 -->
+        <file name="uuidv7.c" role="src"/>
+        <file name="php_uuidv7.h" role="src"/>
+
+        <!-- 编译配置 -->
+        <file name="config.m4" role="src"/>
+        <file name="config.w32" role="src"/>
+
+        <!-- 测试用例 -->
+        <dir name="tests" role="test">
+            <file name="UuidV7Test.php" role="test"/>
+        </dir>
+
+        <!-- 文档 -->
+        <file name="README.md" role="doc"/>
+        <file name="LICENSE" role="doc"/>
+    </filelist>
+
+    <!-- 许可证 -->
+    <license>BSD-3-Clause</license>
+</package>
