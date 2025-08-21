@@ -1,0 +1,13 @@
+{
+    "name": "ser163/uuidv7",
+    "type": "php-ext",
+    "license": "BSD-3-Clause",
+    "description": "UUID v7 extension",
+    "require": {
+        "php": ">= 7.4.0"
+    },
+    "php-ext": {
+        "extension-name": "uuidv7",
+        "configure-options": []
+    }
+}
