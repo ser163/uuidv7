@@ -3,5 +3,6 @@ ARG_ENABLE('uuidv7', 'uuidv7 support', 'no');
 if (PHP_UUIDV7 != 'no') {
 	AC_DEFINE('HAVE_UUIDV7', 1, 'uuidv7 support enabled');
 
-	EXTENSION('uuidv7', 'uuidv7.c', null, '/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1');
+	EXTENSION('uuidv7', 'uuidv7.c', PHP_UUIDV7_SHARED, '/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1');
+	ADD_EXTENSION_DEP("uuidv7", "openssl");
 }
